@@ -1,0 +1,71 @@
+{
+  "title": "The light we carry",
+  "genre": "Cinematic folk ballad",
+  "bpm": 72,
+  "key": "D",
+  "scale": "major",
+  "mood": "Reflective and intimate, growing into warm hope",
+  "vocal_gender": "Female",
+  "timbre": "Warm, clear alto",
+  "performance": "Slow expressive storytelling, sustained phrases and natural breaths",
+  "instruments": "Fingerpicked acoustic guitar, felt piano, upright bass, brushed drums, strings, lyrical electric guitar",
+  "production": "Warm natural room ambience and a wide, gentle final chorus",
+  "global_metadata": "A complete five-minute song with three full verses, repeated choruses, a bridge, instrumental solo and a lingering outro. Preserve all sung words and let the arrangement develop patiently.",
+  "sections": [
+    {
+      "name": "intro",
+      "lyrics": "",
+      "direction": "Eight bars of fingerpicked guitar and soft piano; spacious, unhurried opening."
+    },
+    {
+      "name": "verse 1",
+      "lyrics": "I left the porch light burning in the rain\nAnd took the road that bends around the bay\nThe houses held their windows to the dawn\nWhile every restless shadow slipped away\nI carried all the words I could not say\nLike little stones inside a borrowed coat\nThe river took the silence from my hands\nAnd gave me back a song I used to know",
+      "direction": "Sing each line slowly over two bars; do not rush the phrasing. Gradually add warm bass and brushed drums."
+    },
+    {
+      "name": "chorus",
+      "lyrics": "We are the light we carry through the weather\nWe are the hands that hold against the cold\nWe are the threads that find their way together\nA little braver as the years unfold\nLeave a little room for all the wonder\nLeave a little time to lose the road\nSomewhere in the quiet after thunder\nThere is still a place that we call home",
+      "direction": "Open into a broad, spacious chorus with strings and gentle backing harmonies. Let every line breathe."
+    },
+    {
+      "name": "verse 2",
+      "lyrics": "The station clock was running half an hour\nBehind the people waiting for a train\nA woman held a paper full of flowers\nAnd smiled as sunlight found the windowpane\nI thought about the miles we put between us\nThe letters folded carefully away\nAnd all the ordinary things that teach us\nThere is another way to face the day",
+      "direction": "Sing each line slowly over two bars; do not rush the phrasing. Gradually add warm bass and brushed drums."
+    },
+    {
+      "name": "chorus",
+      "lyrics": "We are the light we carry through the weather\nWe are the hands that hold against the cold\nWe are the threads that find their way together\nA little braver as the years unfold\nLeave a little room for all the wonder\nLeave a little time to lose the road\nSomewhere in the quiet after thunder\nThere is still a place that we call home",
+      "direction": "Open into a broad, spacious chorus with strings and gentle backing harmonies. Let every line breathe."
+    },
+    {
+      "name": "bridge",
+      "lyrics": "No promise keeps the winter from the doorway\nNo map can show us every turning tide\nBut I can meet you halfway in the morning\nAnd walk the unfamiliar at your side\nIf all we have is one more honest moment\nIf all we know is how to start again\nThen let us leave the broken gate wide open\nAnd listen to the rhythm of the rain",
+      "direction": "Pull back to piano and lead voice, then rebuild with swelling strings."
+    },
+    {
+      "name": "solo",
+      "lyrics": "",
+      "direction": "Sixteen bars of lyrical electric guitar over the chorus harmony."
+    },
+    {
+      "name": "verse 3",
+      "lyrics": "At evening I returned along the water\nThe same old road beneath a different sky\nThe boats were coming home across the harbour\nAnd gulls were drawing circles way up high\nYour message waited softly in my pocket\nNo grand reply was needed after all\nI watched the first star flicker into waking\nAnd found the words to finally make the call",
+      "direction": "Sing each line slowly over two bars; do not rush the phrasing. Gradually add warm bass and brushed drums."
+    },
+    {
+      "name": "chorus",
+      "lyrics": "We are the light we carry through the weather\nWe are the hands that hold against the cold\nWe are the threads that find their way together\nA little braver as the years unfold\nLeave a little room for all the wonder\nLeave a little time to lose the road\nSomewhere in the quiet after thunder\nThere is still a place that we call home",
+      "direction": "Open into a broad, spacious chorus with strings and gentle backing harmonies. Let every line breathe."
+    },
+    {
+      "name": "outro",
+      "lyrics": "There is still a place that we call home\nLeave the light on, I am coming home",
+      "direction": "Repeat the motif softly, then allow a long instrumental fade."
+    }
+  ],
+  "duration": 300,
+  "steps": 30,
+  "seed": 23,
+  "randomize_seed": false,
+  "offload": "model"
+}

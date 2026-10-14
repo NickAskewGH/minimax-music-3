@@ -1,0 +1,47 @@
+{
+  "title": "Daybreak",
+  "prompt": "",
+  "global_metadata": "",
+  "vocal_details": "",
+  "arrangement": "",
+  "genre": "Acoustic pop",
+  "subgenre": "",
+  "bpm": 96,
+  "key": "C",
+  "scale": "major",
+  "mood": "Intimate verses opening into a hopeful chorus",
+  "scenario": "",
+  "production": "Natural room sound, warm and spacious",
+  "vocal_gender": "Female",
+  "timbre": "Warm and breathy",
+  "performance": "",
+  "harmonies": "Light stacked harmonies in the chorus",
+  "vocal_effects": "",
+  "instruments": "Fingerpicked acoustic guitar, piano, upright bass",
+  "groove": "",
+  "bass": "",
+  "percussion": "",
+  "textures": "",
+  "spatial_effects": "",
+  "instrumental": false,
+  "lyrics": "",
+  "sections": [
+    {
+      "name": "verse",
+      "lyrics": "Morning spills across the floor\nI leave my worries by the door",
+      "direction": "Solo guitar, close vocal, very soft piano"
+    },
+    {
+      "name": "chorus",
+      "lyrics": "Let the daylight carry me\nInto all that I can be",
+      "direction": "Brushed drums and upright bass enter; open stereo harmonies"
+    }
+  ],
+  "duration": 60.0,
+  "seed": 0,
+  "randomize_seed": true,
+  "headroom": 0.0,
+  "steps": 30,
+  "guidance": 1.7,
+  "offload": "model"
+}

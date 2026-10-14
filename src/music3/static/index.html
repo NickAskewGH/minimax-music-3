@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniMax Music 3 · Local Studio</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="MiniMax Music 3 home"><span class="brand-icon">Ⅲ</span><span>MINIMAX<span class="brand-sub">MUSIC STUDIO</span></span></a>
+    <div class="local-label"><span class="dot"></span> YOUR LOCAL STUDIO</div>
+    <button class="nav active" id="new-song">＋ &nbsp; New session</button>
+    <div class="sidebar-heading">SESSION STARTERS</div>
+    <div id="presets"></div>
+    <div class="sidebar-heading history-heading">YOUR GENERATIONS <button id="refresh-history" title="Refresh generation history" aria-label="Refresh generation history">↻</button></div>
+    <div id="history"><p class="muted small">Your songs will appear here.</p></div>
+    <div class="sidebar-footer">Made on your machine.<br>Prompts, weights & audio stay local.<a href="/docs" target="_blank">Local API documentation ↗</a></div>
+  </aside>
+
+  <main>
+    <header><div class="breadcrumb">WORKSPACE <span>/</span> STUDIO</div><button class="system-pill" id="system-button"><span class="dot"></span><span id="system-label">Checking local runtime…</span></button></header>
+    <div class="page-heading"><div><div class="eyebrow">MINIMAX MUSIC 3</div><h1>Make room for your sound.</h1><p>Shape the song. Set the scene. Let it play.</p></div><span class="edition">LOCAL<br><b>01 / STUDIO</b></span></div>
+    <div id="error" class="notice error" role="alert" hidden></div>
+    <form id="song-form">
+      <div class="session-toolbar"><label class="title-field"><span class="sr-only">Song title</span><input name="title" maxlength="160" placeholder="Name this session" value="Untitled session"></label><div class="toolbar-actions"><button type="button" id="import">Import JSON</button><button type="button" id="export">Export JSON</button><button type="button" id="preview">View prompt ↗</button></div></div>
+      <input type="file" id="import-file" accept="application/json,.json" hidden>
+      <div class="workspace-grid">
+        <section class="panel"><div class="panel-heading"><span class="step">01</span><h2>The sound</h2><span class="muted small">STRUCTURED CAPTION</span></div>
+          <div class="tabs" role="tablist" aria-label="Prompt categories"><button type="button" class="selected" role="tab" aria-selected="true" data-tab="global">Global</button><button type="button" role="tab" aria-selected="false" data-tab="vocals">Vocals</button><button type="button" role="tab" aria-selected="false" data-tab="arrangement">Arrangement</button></div>
+          <div class="tab-panel" id="tab-global" role="tabpanel"><p class="hint">The musical identity, from the first note to the last.</p><div id="global-fields" class="field-grid"></div></div>
+          <div class="tab-panel" id="tab-vocals" role="tabpanel" hidden><p class="hint">Define the voice and how it moves through the song.</p><label class="check"><input name="instrumental" type="checkbox"> Instrumental · no vocals</label><div id="vocal-fields" class="field-grid"></div></div>
+          <div class="tab-panel" id="tab-arrangement" role="tabpanel" hidden><p class="hint">Build a palette, then evolve it in the section chart.</p><div id="arrangement-fields" class="field-grid"></div></div>
+        </section>
+        <section class="panel song-panel"><div class="panel-heading"><span class="step">02</span><h2>The song</h2><select id="lyrics-mode" aria-label="Lyrics editor mode"><option value="chart">Section chart</option><option value="raw">Tagged lyrics</option></select></div>
+          <p class="hint">Lyrics are sung. Directions guide the arrangement.</p>
+          <div id="chart-editor"><div id="sections"></div><button type="button" class="add-section" id="add-section">＋ Add a section</button></div>
+          <label id="raw-editor" hidden>Tagged lyrics<textarea name="lyrics" rows="17" placeholder="[verse]&#10;Words on their own lines&#10;&#10;[chorus]&#10;Let the melody rise"></textarea><span class="hint">Put [verse], [chorus] and other tags on their own lines.</span></label>
+          <p class="hint" id="instrumental-hint" hidden>Instrumental mode sends [instrumental] instead of sung lyrics. Your chart directions still shape the arrangement.</p>
+        </section>
+      </div>
+      <section class="panel generation-panel"><div class="generation-top"><div><div class="eyebrow">SESSION LENGTH</div><label class="duration-label">Maximum duration <output id="duration-value">60s</output></label><input type="range" name="duration" min="5" max="300" step="5" value="60" aria-label="Maximum duration in seconds"><div class="range-labels"><span>5 SECONDS</span><span>5 MINUTES</span></div></div><div class="generate-area"><label class="check"><input type="checkbox" id="monitor"> Listen while audio renders</label><button type="submit" class="primary" id="generate">Generate music <span>↗</span></button><span class="hint">The model may finish before the maximum duration.</span></div></div>
+        <details id="advanced"><summary>Advanced controls <span>Seed, flow matching & memory</span></summary><div id="advanced-fields" class="field-grid advanced-grid"></div><p class="hint">Use 30 flow-matching steps for listening. Very low values such as 4 are for speed tests and can severely degrade audio. More steps take longer; guidance controls how strongly rendering follows the conditioning. Headroom buffers decoded audio before live playback, which begins after musical frames are composed.</p></details>
+      </section>
+    </form>
+    <section class="player panel" aria-label="Generation player"><div class="record-icon">♫</div><div class="player-content"><div class="player-title-row"><h2 id="track-title">Your next track starts here.</h2><span id="track-seed" class="muted small"></span></div><p id="job-message" aria-live="polite">Choose a starter or write your own song.</p><progress id="job-progress" max="1" value="0" hidden></progress><audio id="audio" controls preload="metadata" hidden></audio><div id="job-links" class="job-links"></div></div><button type="button" id="cancel" hidden>Cancel</button><button type="button" id="stop-monitor" hidden>Mute live preview</button></section>
+    <footer>Tempo, key and arrangement are creative guidance, not exact guarantees. <span>MiniMax Music 3 · Local inference</span></footer>
+  </main>
+  <dialog id="detail-dialog"><div class="dialog-heading"><h2 id="dialog-title"></h2><button id="close-dialog" aria-label="Close dialog">✕</button></div><pre id="dialog-content"></pre></dialog>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
